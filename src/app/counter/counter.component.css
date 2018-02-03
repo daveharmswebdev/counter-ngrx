@@ -1,0 +1,27 @@
+.card-block {
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 12px 12px;
+  width: 80%;
+}
+
+button {
+  width: 50px;
+}
+
+.display-count {
+  border: 1px solid grey;
+  width: 50px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+div.demo-area {
+  padding: 5px;
+  background-color: lightblue;
+}
+
+.demonstration {
+  margin: 5px;
+}
+

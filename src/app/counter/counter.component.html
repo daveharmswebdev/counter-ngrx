@@ -1,3 +1,60 @@
-<p>
-  counter works!
-</p>
+<div class="card-block">
+  <div class="form-group row">
+    <label for="counter" class="col-2 col-form-label">Counter</label>
+    <div class="col-10">
+      <input class="form-control" type="text" id="counter" [(ngModel)]="counter" (blur)="setCounter()">
+    </div>
+  </div>
+</div>
+<div class="col">
+  <div class="card-block">
+    <div class="row">
+      <div class="col-4">
+        <label>Children</label>
+        <div class="display">
+          <button class="btn" (click)="addChild()">+</button>
+          <div class="display-count">
+            <p>{{children}}</p>
+          </div>
+          <button class="btn" (click)="removeChild()">-</button>
+        </div>
+      </div>
+      <div class="col-4">
+        <label>Teenagers</label>
+        <div class="display">
+          <button class="btn" (click)="addTeen()">+</button>
+          <div class="display-count">
+            <p>{{teenagers}}</p>
+          </div>
+          <button class="btn" (click)="removeTeen()">-</button>
+        </div>
+      </div>
+      <div class="col-4">
+        <label>Adults</label>
+        <div class="display">
+          <button class="btn" (click)="addAdult()">+</button>
+          <div class="display-count">
+            <p>{{adults}}</p>
+          </div>
+          <button class="btn" (click)="removeAdult()">-</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-block demo-area">
+    <div class="container">
+      <div class="row">
+        <p class="demonstration">Counter: {{counter}}</p>
+      </div>
+      <div class="row">
+        <p class="demonstration">Children: {{children}}</p>
+      </div>
+      <div class="row">
+        <p class="demonstration">Teenagers: {{teenagers}}</p>
+      </div>
+      <div class="row">
+        <p class="demonstration">Adults: {{adults}}</p>
+      </div>
+    </div>
+  </div>
+</div>

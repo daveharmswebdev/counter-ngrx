@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { CounterService } from '../shared/counter.service';
+import { Observable } from 'rxjs/Observable';
+import { ICount } from '../models/count';
 
 @Component({
   selector: 'app-list',
@@ -6,10 +9,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./list.component.css']
 })
 export class ListComponent implements OnInit {
+  private counts$: Observable<ICount>;
 
-  constructor() { }
+  constructor(private counterService: CounterService) {
+    this.counts$ = this.counterService.getCounts();
+  }
 
   ngOnInit() {
+    this.counts$.subscribe(
+      counts => console.log(counts)
+    );
   }
 
 }

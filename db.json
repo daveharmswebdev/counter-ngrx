@@ -1,0 +1,11 @@
+{
+  "counts": [
+    {
+      "id": 0,
+      "counter": "Dave",
+      "children": 54,
+      "teenagers": 67,
+      "adults": 109
+    }
+  ]
+}
