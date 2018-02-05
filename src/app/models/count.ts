@@ -5,3 +5,10 @@ export interface ICount {
   teenagers: number;
   adults: number;
 }
+
+export interface INewCount {
+  counter: string;
+  children: number;
+  teenagers: number;
+  adults: number;
+}

@@ -1,11 +1,32 @@
 {
   "counts": [
     {
-      "id": 0,
       "counter": "Dave",
       "children": 54,
-      "teenagers": 67,
-      "adults": 109
+      "teenagers": 670,
+      "adults": 109,
+      "id": 0
+    },
+    {
+      "counter": "Ethan",
+      "children": 2,
+      "teenagers": 57,
+      "adults": 34,
+      "id": 1
+    },
+    {
+      "counter": "Dave",
+      "children": 4,
+      "teenagers": 6,
+      "adults": -1,
+      "id": 2
+    },
+    {
+      "counter": "Tom Brady",
+      "children": 15,
+      "teenagers": 9,
+      "adults": 12,
+      "id": 3
     }
   ]
 }

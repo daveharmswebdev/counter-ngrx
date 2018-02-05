@@ -1,45 +1,48 @@
-<div class="card-block">
-  <div class="form-group row">
-    <label for="counter" class="col-2 col-form-label">Counter</label>
-    <div class="col-10">
-      <input class="form-control" type="text" id="counter" [(ngModel)]="counter" (blur)="setCounter()">
+<div class="card">
+  <div class="card-block">
+    <div class="form-group row">
+      <label for="counter" class="col-2 col-form-label">Counter</label>
+      <div class="col-10">
+        <input class="form-control" type="text" id="counter" [(ngModel)]="counter" (blur)="setCounter()">
+      </div>
     </div>
   </div>
-</div>
-<div class="col">
   <div class="card-block">
     <div class="row">
       <div class="col-4">
         <label>Children</label>
         <div class="display">
-          <button class="btn" (click)="addChild()">+</button>
+          <button class="btn count-control" (click)="addChild()">+</button>
           <div class="display-count">
             <p>{{children}}</p>
           </div>
-          <button class="btn" (click)="removeChild()">-</button>
+          <button class="btn count-control" (click)="removeChild()">-</button>
         </div>
       </div>
       <div class="col-4">
         <label>Teenagers</label>
         <div class="display">
-          <button class="btn" (click)="addTeen()">+</button>
+          <button class="btn count-control" (click)="addTeen()">+</button>
           <div class="display-count">
             <p>{{teenagers}}</p>
           </div>
-          <button class="btn" (click)="removeTeen()">-</button>
+          <button class="btn count-control" (click)="removeTeen()">-</button>
         </div>
       </div>
       <div class="col-4">
         <label>Adults</label>
         <div class="display">
-          <button class="btn" (click)="addAdult()">+</button>
+          <button class="btn count-control" (click)="addAdult()">+</button>
           <div class="display-count">
             <p>{{adults}}</p>
           </div>
-          <button class="btn" (click)="removeAdult()">-</button>
+          <button class="btn count-control" (click)="removeAdult()">-</button>
         </div>
       </div>
     </div>
+  </div>
+  <div class="add-count-wrapper">
+    <button class="btn btn-default add-count" type="button" (click)="addCount()">Add Count</button>
   </div>
   <div class="card-block demo-area">
     <div class="container">

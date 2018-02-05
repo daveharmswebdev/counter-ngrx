@@ -1,3 +1,41 @@
-<p>
-  list-detail works!
-</p>
+<div class="container">
+  <div class="card">
+    <div *ngIf="count" class="card-block">
+      <h3>Count {{count.id}}</h3>
+      <form #counterForm="ngForm" (submit)="editCount(count)">
+        <div class="form-group">
+          <label for="counter">Counter</label>
+          <input name="counter" type="text" class="form-control" id="counter" [(ngModel)]="count.counter">
+        </div>
+
+        <div class="form-group">
+          <label for="children">Children</label>
+          <input name="children" type="number" class="form-control" id="children" [(ngModel)]="count.children">
+        </div>
+
+        <div class="form-group">
+          <label for="teenagers">Teenagers</label>
+          <input name="teenagers" type="number" class="form-control" id="teenagers" [(ngModel)]="count.teenagers">
+        </div>
+
+        <div class="form-group">
+          <label for="adults">Adults</label>
+          <input name="adults" type="number" class="form-control" id="adults" [(ngModel)]="count.adults">
+        </div>
+        <div>
+          <button class="btn btn-primary" type="submit">Edit</button>
+          <button class="btn btn-danger" (click)="removeCount(count.id)">Delete</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-block">
+      <p>{{countIndex}}</p>
+    </div>
+    <div class="card-block">
+      <p>{{count | json}}</p>
+    </div>
+  </div>
+</div>
+

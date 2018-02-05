@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { NgModel } from '@angular/forms';
 
-import { ICount } from '../models/count';
+import { ICount, INewCount } from '../models/count';
+import { CounterService } from '../shared/counter.service';
 
 @Component({
   selector: 'app-counter',
@@ -14,7 +15,7 @@ export class CounterComponent implements OnInit {
   adults = 0;
   counter = 'Dave';
 
-  constructor() { }
+  constructor(private counterService: CounterService) { }
 
   ngOnInit() {
   }
@@ -29,5 +30,16 @@ export class CounterComponent implements OnInit {
   removeTeen() { this.teenagers--; }
   addAdult() { this.adults++; }
   removeAdult() { this.adults--; }
+
+  addCount() {
+    const count: INewCount = {
+      counter: this.counter,
+      children: this.children,
+      teenagers: this.teenagers,
+      adults: this.adults
+    };
+    this.counterService.addCount(count);
+    console.log('posted', count);
+  }
 
 }

@@ -1,12 +1,24 @@
 .card-block {
   border: 1px solid black;
   border-radius: 5px;
-  margin: 12px 12px;
+  margin: 12px auto;
   width: 80%;
 }
 
-button {
+button.count-control {
   width: 50px;
+}
+
+div.add-count-wrapper {
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button.add-count {
+  margin: 0 auto;
+  width: 200px;
 }
 
 .display-count {

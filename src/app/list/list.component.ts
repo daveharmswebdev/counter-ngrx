@@ -9,7 +9,7 @@ import { ICount } from '../models/count';
   styleUrls: ['./list.component.css']
 })
 export class ListComponent implements OnInit {
-  private counts$: Observable<ICount>;
+  counts$: Observable<ICount>;
 
   constructor(private counterService: CounterService) {
     this.counts$ = this.counterService.getCounts();

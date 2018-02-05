@@ -13,4 +13,22 @@ export class CounterService {
     return this.http.get<ICount>(this._baseUrl + 'counts');
   }
 
+  getCountById(id) {
+    return this.http.get<ICount>(this._baseUrl + 'counts/' + id);
+  }
+
+  updateCount(update: ICount) {
+    const {id, ...body} = update;
+    return this.http.put<ICount>(this._baseUrl + 'counts/' + id, body)
+      .toPromise();
+  }
+
+  removeCount(id) {
+    return this.http.delete(this._baseUrl + 'counts/' + id).toPromise();
+  }
+
+  addCount(body) {
+    return this.http.post(this._baseUrl + 'counts', body).toPromise();
+  }
+
 }
